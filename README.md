@@ -2,5 +2,5 @@ project-euler
 =============
 
 - Solutions to https://projecteuler.net/ problems
-- Written in Python
+- Written as Python scripts
 - You're only cheating yourself
