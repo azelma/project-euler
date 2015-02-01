@@ -22,5 +22,7 @@ for i in range(len(abundant_numbers)):
         current_sum = abundant_numbers[i] + abundant_numbers[j]
         if current_sum < 28123:
             can_sum.add(current_sum)
+        else:
+            break
 
 print sum(range(28123)) - sum(can_sum)
