@@ -8,6 +8,7 @@ project-euler
 Timing
 -------
 Information on approximately how long each script takes to run, based on "real" output of ```time python X.py``` command
+
 Problem | Time
 ------- | ----
 1       | 0.038s
