@@ -1,9 +1,12 @@
+import math
+
 def sum_of_proper_divisors(n):
     sum = 0
-    for i in range(1, int(n/2) + 1):
+    proper_divisors = set()
+    for i in range(1, int(math.sqrt(n))):
         if n % i == 0:
-            sum = sum + i
-    return sum
+            proper_divisors.add(i)
+    return sum(proper_divisors)
 
 def is_abundant(n):
     return sum_of_proper_divisors(n) > n
