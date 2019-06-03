@@ -81,13 +81,10 @@ def winning_hand(hands):
   type_1 = hand_type(hands[0], frequencies[0])
   type_2 = hand_type(hands[1], frequencies[1])
   if hand_ranking.index(type_1) > hand_ranking.index(type_2):
-    print type_1 + ' beats ' + type_2
     return hands[0]
   elif hand_ranking.index(type_1) < hand_ranking.index(type_2):
-    print type_2 + ' beats ' + type_1
     return hands[1]
   else:
-    print 'Both ' + type_1
     sorted_hands = [sorted(hands[0], key=lambda x: rank_score(x) + frequencies[0][rank(x)] * 100), sorted(hands[1], key=lambda x: rank_score(x) + frequencies[1][rank(x)] * 100)]
     for i in range(1,5):
         if rank_score(sorted_hands[0][-i]) > rank_score(sorted_hands[1][-i]):
